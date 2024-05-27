@@ -1,0 +1,62 @@
+{
+  "name": "roborovski-org-contracts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ROBOROVSKI SMART CONTRACTS",
+  "author": {
+    "name": "ROBOROVSKI",
+    "email": "support@roborovski.org",
+    "url": "https://roborovski.org"
+  },
+  "scripts": {
+    "clean": "rimraf ./build/ && mkdirp ./build/",
+    "precompile": "yarn clean",
+    "compile": "truffle compile",
+    "predeploy": "yarn run compile",
+    "deploy": "truffle migrations --network",
+    "test": "truffle test",
+    "verify": "truffle run verify --network",
+    "ganache-cli": "node ./scripts/ganache-cli.js",
+    "concat": "waffle flatten"
+  },
+  "homepage": "https://github.com/roborovskiNFT/contracts/#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roborovskiNFT/contracts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roborovskiNFT/contracts/issues",
+    "email": "support@roborovski.org"
+  },
+  "files": [
+    "contracts",
+    "build"
+  ],
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.0",
+    "base58-js": "^1.0.0",
+    "bignumber.js": "^9.0.2",
+    "bs58": "^5.0.0",
+    "erc721a": "^4.2.3",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.4"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.5.1",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "ganache-cli": "^6.12.2",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "truffle": "^5.4.17",
+    "truffle-assertions": "^0.9.2",
+    "truffle-plugin-verify": "^0.5.16"
+  },
+  "contributors": [
+    {
+      "name": "Aleksandr Ivannikov",
+      "email": "dev@an-ivannikov.com",
+      "url": "https://an-ivannikov.com"
+    }
+  ]
+}
